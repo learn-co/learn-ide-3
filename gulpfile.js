@@ -278,6 +278,10 @@ gulp.task('alter-files', function() {
 
   replaceInFile(path.join(buildDir, 'src', 'config-schema.js'), [
     [
+      "['.git', '.hg', '.svn', '.DS_Store', '._*', 'Thumbs.db', 'desktop.ini']",
+      "['.git', '.hg', '.svn', '.DS_Store', '._*', 'Thumbs.db', 'desktop.ini', '.ssh', '.results.json', '.learn*', '.ready', '.netrc', '.custom_commands.log', '.gitconfig', '.config']"
+    ],
+    [
       "automaticallyUpdate: {\n        description: 'Automatically update Atom when a new release is available.',\n        type: 'boolean',\n        default: true\n      }",
       "automaticallyUpdate: {\n        description: 'Automatically update Atom when a new release is available.',\n        type: 'boolean',\n        default: false\n      }",
     ],
