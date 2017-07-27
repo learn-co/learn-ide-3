@@ -1,6 +1,6 @@
-# Learn IDE
+# Learn IDE 3
 
-[Learn IDE](https://learn.co/ide) is a fully featured text editor for [Learn](https://learn.co). It provides a remote development environment to allow users to get started coding using real tools without the pain of setting one up locally. It is built on top of Github's open source [Atom editor](https://atom.io/).
+[Learn IDE 3](https://learn.co/ide) is a fully featured text editor for [Learn](https://learn.co). It provides a remote development environment to allow users to get started coding using real tools without the pain of setting one up locally. It is built on top of Github's open source [Atom editor](https://atom.io/).
 
 ## Project Structure
 
@@ -8,15 +8,14 @@ The Learn IDE client is a modified Atom build with two packages injected to prov
 
 **Atom Packages:**
 
-- **[Learn IDE](https://github.com/learn-co/learn-ide)** - The main extension
-- **[Learn IDE Tree](https://github.com/learn-co/learn-ide-tree)** - Our fork of Atom's [tree view](https://github.com/atom/tree-view). Intercepts Atom's file system events and instead performs them on our remote backend.
+- **[Learn IDE 3](https://github.com/learn-co/learn-ide-3)** - The main extension
+- **[Learn IDE 3 Tree](https://github.com/learn-co/learn-ide-3-tree)** - Our fork of Atom's [tree view](https://github.com/atom/tree-view). Intercepts Atom's file system events and instead performs them on our remote backend.
 - **[Learn IDE Material UI](https://github.com/learn-co/learn-ide-material-ui)** - Our fork of [atom-material-ui](https://github.com/atom-material/atom-material-ui) with our own set of default configurations.
-- **[Learn IDE Notifications](https://github.com/learn-co/learn-ide-notifications)** - Our fork of Atom's [notifications](https://github.com/atom/notifications) with our own set of default configurations.
+- **[Learn IDE 3 Notifications](https://github.com/learn-co/learn-ide-3-notifications)** - Our fork of Atom's [notifications](https://github.com/atom/notifications) with our own set of default configurations.
 
 **Related libraries:**
 
 - **[nsync-fs](https://github.com/learn-co/nsync-fs)** A virtual file system for keeping Atom synced with the remote server
-- **[atom-socket](https://github.com/learn-co/atom-socket)** A library for sharing a single websocket connection in Atom packages.
 
 ## Atom and Electron
 
@@ -27,9 +26,9 @@ The Learn IDE application currently uses [Atom at v1.14.4](https://github.com/at
 1. Download [Atom](https://atom.io/)
 2. Clone the package repos:
 ```shell
-git clone https://github.com/learn-co/learn-ide.git
-git clone https://github.com/learn-co/learn-ide-tree.git
-git clone https://github.com/learn-co/learn-ide-material-ui.git
+git clone https://github.com/learn-co/learn-ide-3.git
+git clone https://github.com/learn-co/learn-ide-3-tree.git
+git clone https://github.com/learn-co/learn-ide-3-notifications.git
 ```
 3. Run `npm install` in each repo
 4. Run `apm link` inside each repo - This will create a sym link to your .atom directory, making the plugin available for use.
@@ -60,9 +59,9 @@ You can configure the Learn IDE by creating a `.env` file either in Atom's home 
 
 Key              | Default Value      | Function
 ---------------- | ------------------ | --------
-IDE_WS_HOST      | `ile.learn.co`     | The host used for websocket connections
+IDE_WS_HOST      | `ide.learn.co`     | The host used for websocket connections
 IDE_WS_PORT      | `443`              | The port used for websocket connections
-IDE_WS_TERM_PATH | `v2/terminal`      | The path used for websocket connections
+IDE_WS_TERM_PATH | `socket`      | The path used for websocket connections
 IDE_LEARN_CO     | `https://learn.co` | The location of learn to connect to
 
 The `IDE_LEARN_CO` key is useful for developers and testers at Flatiron School, as it can be used to point the client to a local or QA environment; however, it does not change the IDE server's knowledge of Learn's location. In other words, you must sign in to the IDE with a production user, as the IDE servers will authenticate you against the Learn production environment.
