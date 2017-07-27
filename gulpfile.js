@@ -20,7 +20,7 @@ var buildDir = path.join(__dirname, 'build')
 console.log('build directory', buildDir)
 
 function productName() {
-  var name = 'Learn IDE';
+  var name = 'Learn IDE 3';
 
   if (buildBeta) {
     name += ' Beta';

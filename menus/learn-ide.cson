@@ -27,7 +27,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Learn IDE'
+      'label': 'Learn IDE 3'
       'submenu': [
         {
           'label': 'Reconnect'
