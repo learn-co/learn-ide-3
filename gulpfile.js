@@ -130,7 +130,7 @@ gulp.task('inject-packages', function() {
 
 gulp.task('replace-files', function() {
   var iconSrc = path.join('resources', 'app-icons', '**', '*');
-  var iconDest = path.join(buildDir, 'resources', 'app-icons', 'stable')
+  var iconDest = path.join(buildDir, 'resources', 'app-icons')
 
   gulp.src([iconSrc]).pipe(gulp.dest(iconDest));
 
