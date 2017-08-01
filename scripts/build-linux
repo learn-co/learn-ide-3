@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ssh deployer@$BUILD_SERVER << HERE
+cd learn-ide-3
+git checkout master
+git pull origin master
+npm install
+gulp build
+HERE
+
+scp deployer@$BUILD_SERVER:learn-ide-3/build/out/learn_ide_3* build/out
+ls -lah build/out
