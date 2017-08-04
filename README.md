@@ -34,9 +34,13 @@ git clone https://github.com/learn-co/learn-ide-3-notifications.git
 4. Run `apm link` inside each repo - This will create a sym link to your .atom directory, making the plugin available for use.
 5. Open Atom
 
-## Building the Learn IDE
+## Building the Learn IDE 3
 
 `gulp build` - Builds the Atom application with our packages injected ready for distribution and swaps out icons and names to brand it the Learn IDE. On Mac, this will automatically attempt to sign the application using Flatiron School's development certificate (which must be installed on your machine). On Windows, the installer must be signed manually.
+
+### `./scripts/build-linux`
+
+This scripts will `ssh` onto a host that you give it, and output `.deb` and `.rpm` distros to a given location. It's useful if you are working on a mac, and have a dedicated linux build server. See the script itself for more info on usage.
 
 ## Releasing
 
