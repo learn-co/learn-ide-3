@@ -1,6 +1,17 @@
 #!/bin/bash
 
-ssh deployer@$BUILD_SERVER << HERE
+# USAGE
+# ./build-linux <external build-server> <local out-location>
+
+# EXAMPLE (run from repo's root)
+# ./scripts/build-linux builder@build.ide.learn.co ./build/out
+
+echo "--> ssh onto $1..."
+
+ssh $1 << HERE
+echo "--> clone & cd into learn-ide-3, checkout and pull master, npm install, and start build..."
+
+git clone https://github.com/learn-co/learn-ide-3
 cd learn-ide-3
 git checkout master
 git pull origin master
@@ -8,5 +19,6 @@ npm install
 gulp build
 HERE
 
-scp deployer@$BUILD_SERVER:learn-ide-3/build/out/learn_ide_3* build/out
-ls -lah build/out
+echo "--> copy $1:learn-ide-3/build/out/learn_ide_3* to $2..."
+scp $1:learn-ide-3/build/out/learn_ide_3* $2
+echo "all done!!1!"
