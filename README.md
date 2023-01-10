@@ -1,4 +1,6 @@
-# Learn IDE 3
+# :warning: This package is no longer supported
+
+## Learn IDE 3
 
 [Learn IDE 3](https://learn.co/ide) is a fully featured text editor for [Learn](https://learn.co). It provides a remote development environment to allow users to get started coding using real tools without the pain of setting one up locally. It is built on top of Github's open source [Atom editor](https://atom.io/).
 
